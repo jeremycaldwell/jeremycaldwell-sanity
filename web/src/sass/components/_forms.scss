@@ -1,0 +1,182 @@
+// =============================================================================
+// FORMS
+// =============================================================================
+
+// Label.
+label,
+%label {
+  @include font-size(16);
+  display: block;
+  font-weight: 700;
+  margin-bottom: 5px;
+
+  .form-type-radio & {
+    display: inline;
+  }
+}
+
+// Text input.
+.form-text,
+.form-search,
+.form-email,
+.form-tel,
+textarea,
+select,
+.crm-form-text,
+.crm-form-password {
+  background-color: $gray--light;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  max-width: 500px;
+  padding: 10px;
+  transition: background-color .3s ease;
+  width: 100%;
+
+  // Focus.
+  &:focus {
+    background-color: $white;
+  }
+}
+
+select {
+  min-height: 40px;
+}
+
+// Form item.
+.form-item {
+  margin: 0 0 20px;
+
+  // Last.
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+fieldset {
+  border: 2px solid #ccc;
+  margin-bottom: 20px;
+  min-width: auto;
+  padding: 20px;
+
+  legend {
+    @include font-size(18);
+    background-color: $white;
+    display: block;
+    margin-left: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+
+    @include breakpoint($bp-medium-up) {
+      @include font-size(21);
+    }
+  }
+
+  fieldset {
+    border-width: 1px;
+  }
+}
+
+form {
+
+  // Description.
+  .description {
+    font-size: rem(12px);
+    line-height: rem(18px);
+    max-width: 500px;
+    padding-top: 5px;
+  }
+}
+
+// Hidden text field provided by Honeypot.
+form .link-textfield {
+  @include element-invisible;
+}
+
+// Captcha.
+.captcha {
+  border: 0;
+  margin: 0 0 20px;
+  padding: 0;
+
+  legend {
+    display: none;
+  }
+
+  .fieldset-description {
+    display: none;
+  }
+}
+
+// Contact form.
+#webform-client-form-2541 {
+  select {
+    height: 40px;
+  }
+
+  .form-text,
+  .form-email,
+  .form-textarea {
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .form-textarea {
+    max-width: none;
+  }
+}
+
+// User register form.
+#user-register-form {
+
+  // Password.
+  .confirm-parent {
+    margin-bottom: 0;
+  }
+
+  div.form-item div.password-suggestions {
+    margin-bottom: 0;
+  }
+
+  // CiviCRM form.
+  #edit-civicrm-profile-register {
+    #crm-profile-block {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 500px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    legend {
+      display: none;
+    }
+
+    fieldset {
+      border: 0;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    .label,
+    .content {
+      width: 100%;
+      float: none;
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+}
+
+.recaptcha-section {
+  table {
+    tr {
+      margin: 0;
+      padding: 0;
+    }
+
+    .recaptcha_label {
+      display: none;
+    }
+  }
+}

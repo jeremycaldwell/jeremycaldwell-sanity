@@ -1,0 +1,133 @@
+// =============================================================================
+// TYPOGRAPHY
+// =============================================================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  font-family: $font-header;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: rem(28px);
+  line-height: 1.25;
+  margin-bottom: 40px;
+
+  // @include breakpoint($bp-medium-up) {
+  //   font-size: rem(38px);
+  //   line-height: 1.25;
+  // }
+}
+
+h2 {
+  font-size: rem(28px);
+  line-height: 1.25;
+  margin-bottom: 20px;
+
+  @include breakpoint($bp-medium-up) {
+    font-size: rem(28px);
+    line-height: 1.25;
+  }
+}
+
+h3 {
+  font-size: rem(20px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+
+  @include breakpoint($bp-medium-up) {
+    font-size: rem(24px);
+    line-height: 1.25;
+  }
+}
+
+h4 {
+  font-size: rem(20px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+
+  @include breakpoint($bp-medium-up) {
+    font-size: rem(24px);
+    line-height: 1.25;
+  }
+}
+
+h5 {
+  font-size: rem(20px);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+h6 {
+  font-size: rem(20px);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: rem(15px);
+  line-height: 2;
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+
+blockquote {
+  margin: 20px 0;
+  padding-top: 20px;
+  position: relative;
+
+  // Top horizontal bar.
+  &:before {
+    background: $white;
+    content: "";
+    height: 5px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 93px;
+  }
+
+  p {
+    font-size: rem(26px);
+    line-height: 1.15;
+
+    @include breakpoint($bp-medium-up) {
+      font-size: rem(32px);
+      line-height: 1.13;
+    }
+  }
+
+  cite {
+    color: #d3d4d4;
+    font-size: rem(14px);
+    font-style: normal;
+    line-height: 1.43;
+  }
+}
+
+// Node body unordered and ordered list.
+.node__body ul,
+.node__body ol {
+  font-size: rem(16px);
+  line-height: 1.25;
+  margin: 0 0 20px;
+  padding: 0 0 0 40px;
+
+  li {
+    list-style: disc;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+}
+
+pre {
+  border: 0;
+  font-size: rem(15px);
+  margin: 0;
+  overflow: auto;
+}

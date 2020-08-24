@@ -1,0 +1,119 @@
+// =============================================================================
+// LAYOUT
+// =============================================================================
+
+// Container.
+.layout-container {
+  @include container;
+  margin-bottom: 40px;
+
+  // One or two sidebars.
+  .one-sidebar &,
+  .two-sidebars & {
+    @include container-grid;
+  }
+}
+
+// Sidebar first.
+.sidebar-first {
+
+  // Content.
+  .main {
+    grid-column: 1 / 13;
+    margin-bottom: 20px;
+
+    // Medium +.
+    @include breakpoint($bp-medium-up) {
+      grid-column: 5 / 13;
+      margin-bottom: 0;
+      order: 2;
+    }
+  }
+
+  // Sidebar first.
+  .layout-sidebar-first {
+    grid-column: 1 / 13;
+    margin-bottom: 20px;
+
+    // Medium +.
+    @include breakpoint($bp-medium-up) {
+      grid-column: 1 / 4;
+      margin-bottom: 0;
+      order: 1;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+// Sidebar second.
+.sidebar-second {
+
+  // Content.
+  .layout-3col__left-content {
+
+    @include breakpoint($bp-medium-up) {
+      float: left;
+      width: span(8);
+    }
+
+    @include breakpoint($bp-large-up) {
+      width: span(9);
+    }
+  }
+
+  // Sidebar second.
+  .layout-3col__right-sidebar {
+
+    @include breakpoint($bp-medium-up) {
+      float: right;
+      padding-left: gutter();
+      width: span(4);
+    }
+
+    @include breakpoint($bp-large-up) {
+      width: span(3);
+    }
+  }
+}
+
+// Two sidebars.
+.two-sidebars {
+
+  // Content.
+  .layout-container {
+
+    // Medium +.
+    @include breakpoint($bp-medium-up) {
+      margin-left: auto;
+      margin-right: auto;
+      width: span(6);
+    }
+  }
+
+  // Sidebar first.
+  .region-sidebar-first {
+
+    // Medium +.
+    @include breakpoint($bp-medium-up) {
+      padding-right: gutter();
+      width: span(2);
+    }
+  }
+
+  // Sidebar second.
+  .region-sidebar-second {
+
+    // Medium +.
+    @include breakpoint($bp-medium-up) {
+      padding-left: gutter();
+      width: span(2);
+    }
+  }
+}

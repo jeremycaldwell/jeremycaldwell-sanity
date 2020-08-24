@@ -1,0 +1,35 @@
+// =============================================================================
+// FOOTER
+// =============================================================================
+
+.footer {
+  color: #a5a5a5;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  @include breakpoint($bp-large-up) {
+    padding-top: 60px;
+  }
+
+  // Links.
+  a,
+  a:visited {
+    color: $white;
+  }
+}
+
+//  Inner.
+.footer-inner {
+  @include container;
+}
+
+// Footer top.
+.region-footer-top {
+  padding-bottom: 15px;
+}
+
+// Footer bottom.
+.region-footer-bottom {
+  border-top: 1px solid #818181;
+  padding-top: 18px;
+}

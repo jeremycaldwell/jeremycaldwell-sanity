@@ -1,0 +1,10 @@
+// =============================================================================
+// FULL WIDTH
+// Vertical center and flip.
+// =============================================================================
+
+@mixin vertical-center-flip {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%) rotate(180deg);
+}

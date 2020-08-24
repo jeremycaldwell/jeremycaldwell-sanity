@@ -1,0 +1,21 @@
+// =============================================================================
+// COPYRIGHT
+// =============================================================================
+
+.footer-copyright {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+
+  @include breakpoint($bp-large-up) {
+    float: left;
+    margin-bottom: 0;
+    margin-right: 35px;
+    text-align: left;
+  }
+
+  p {
+    @include font-size(14);
+    margin-bottom: 0;
+  }
+}

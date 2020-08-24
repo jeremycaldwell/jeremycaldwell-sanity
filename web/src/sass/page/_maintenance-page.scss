@@ -1,0 +1,21 @@
+// =============================================================================
+// MAINTENANCE PAGE
+// =============================================================================
+
+html {
+  background-color: $white !important;
+}
+
+.layout-container {
+  @include container;
+}
+
+.maintenance-page__logo-image {
+  display: block;
+  margin-bottom: 40px;
+  width: 75px;
+
+  @include breakpoint($bp-large-up) {
+    width: 122px;
+  }
+}

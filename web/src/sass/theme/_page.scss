@@ -1,0 +1,47 @@
+// =============================================================================
+// PAGE
+// =============================================================================
+
+html {
+  color: $text--dark;
+  font-family: $base-font-family;
+}
+
+body {
+  background-color: $white;
+
+  // Navigation expanded.
+  &.is-navigation-expanded {
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+.dialog-off-canvas-main-canvas {
+  overflow-x: hidden;
+}
+
+// Sections.
+// .page-container {
+// }
+
+// Links.
+a,
+a:visited {
+  color: $brand--sage;
+  text-decoration: underline;
+  transition: color .3s ease;
+
+  // Hover and focus.
+  &:hover,
+  &:focus {
+    color: $brand--sage;
+    text-decoration: underline;
+  }
+}
+
+// Selection.
+::selection {
+  background-color: lighten($brand--sage, 20%);
+  color: $text--dark;
+}

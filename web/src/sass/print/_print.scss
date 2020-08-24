@@ -1,0 +1,105 @@
+// =============================================================================
+// PRINT
+// =============================================================================
+
+@media print {
+
+  html {
+    background-color: transparent !important;
+  }
+
+  // Underline all links.
+  a,
+  a:visited {
+    color: $brand--sage !important;
+    text-decoration: underline !important;
+  }
+
+  // Un-float the content.
+  .main {
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+
+    // Add visible URL after links.
+    a[href]:after {
+      content: " (" attr(href) ")";
+      font-weight: normal;
+      font-size: $base-font-size;
+    }
+
+    // Only display useful links.
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+      content: "";
+    }
+
+    // Add visible title after abbreviations.
+    abbr[title]:after {
+      content: " (' attr(title) ')";
+    }
+  }
+
+  // Turn off any background colors or images.
+  body,
+  .main {
+    background-color: transparent !important;
+    background-image: none !important;
+    color: $black !important;
+  }
+
+  .header {
+    box-shadow: none;
+    height: auto !important;
+    margin-top: 0 !important;
+    position: static;
+  }
+
+  .layout-container {
+    max-width: none !important;
+    padding-top: 0 !important;
+  }
+
+  // Typography.
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .meta {
+    color: $black !important;
+  }
+
+  // Hide elements.
+  .user-menu,
+  .banner,
+  .facet-sidebar,
+  .footer,
+  .local-tasks,
+  .action-links,
+  .ironandsage-admin-menu,
+  .navigation,
+  .region-header-top,
+  .paragraphs-items-field-hero,
+  .node-event__quicklinks,
+  .node-event__registration,
+  #block-views-ironandsage-events-block,
+  #block-block-98 {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  // Events: Full width.
+  .node-event .full-width {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  // Events: Location.
+  .node-event .location-locations-display {
+    margin-bottom: 0 !important;
+  }
+}

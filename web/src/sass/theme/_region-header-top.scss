@@ -1,0 +1,36 @@
+// =============================================================================
+// REGION - HEADER TOP
+// =============================================================================
+
+.region-header-top {
+  background: #c8cec7;
+  display: block;
+  height: 30px;
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  @include breakpoint($bp-large-up) {
+    height: 45px;
+  }
+
+  // Block.
+  .block {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  // Links.
+  a,
+  a:visited {
+    text-decoration: none;
+
+    // Hover and focus.
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

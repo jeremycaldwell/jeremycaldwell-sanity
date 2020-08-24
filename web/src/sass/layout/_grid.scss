@@ -1,0 +1,53 @@
+// =============================================================================
+// GRID
+// =============================================================================
+
+.grid,
+.views-grid .view-content {
+  @include ie11 { display: block !important; } // If IE11, display as block.
+
+  // Columns stacked on mobile.
+  .grid__column {
+    + .grid__column {
+      margin-top: 20px;
+    }
+  }
+}
+
+// Two column.
+.grid--2-column,
+.views-grid--2-column .view-content  {
+  @include breakpoint($bp-medium-up) {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  // Columns stacked on mobile.
+  .grid__column {
+    + .grid__column {
+      @include breakpoint($bp-medium-up) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// Three column.
+.grid--3-column,
+.views-grid--3-column .view-content  {
+  @include breakpoint($bp-large-up) {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  // Columns stacked on mobile.
+  .grid__column {
+    + .grid__column {
+      @include breakpoint($bp-large-up) {
+        margin-top: 0;
+      }
+    }
+  }
+}

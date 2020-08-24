@@ -48,6 +48,12 @@ export default {
     {
       type: 'mainImage',
       options: {hotspot: true}
+    },
+    {
+      type: 'twitter'
+    },
+    {
+      type: 'instagram'
     }
   ]
 }

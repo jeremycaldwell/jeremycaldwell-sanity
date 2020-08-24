@@ -1,0 +1,12 @@
+// =============================================================================
+// ELEMENT INVISIBLE OFF
+// Turns off the element-invisible effect.
+// =============================================================================
+
+@mixin element-invisible-off {
+  clip: auto;
+  height: auto;
+  overflow: auto;
+  position: static !important;
+  width: auto;
+}

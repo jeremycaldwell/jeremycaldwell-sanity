@@ -1,0 +1,152 @@
+// =============================================================================
+// SOCIAL LIST
+// =============================================================================
+
+// List.
+.social-list {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  @include breakpoint($bp-medium-up) {
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    + li {
+      margin-left: 13px;
+
+      @include breakpoint($bp-large-up) {
+        margin-left: 28px;
+      }
+    }
+
+    @include breakpoint($bp-large-up) {
+      display: block;
+      float: left;
+    }
+  }
+
+  // Links.
+  a,
+  a:visited {
+    display: block;
+    height: 30px;
+    width: 30px;
+
+    svg {
+      display: block;
+      height: 30px;
+      width: 30px;
+
+      path {
+        transition: fill .3s ease;
+      }
+    }
+  }
+}
+
+// Text.
+.social-list__text {
+  @include visually-hidden;
+}
+
+// Header.
+.social-list--header {
+  display: none;
+
+  @include breakpoint($bp-medium-up) {
+    display: block;
+    float: left;
+    margin-top: 5px;
+  }
+
+  @include breakpoint($bp-large-up) {
+    float: right;
+    margin-right: 20px;
+    margin-top: 7px;
+  }
+
+  li {
+
+    + li {
+      margin-left: 5px;
+
+      @include breakpoint($bp-large-up) {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  // Links.
+  a,
+  a:visited {
+    height: 12px;
+    width: 12px;
+
+    @include breakpoint($bp-large-up) {
+      height: 30px;
+      width: 30px;
+    }
+
+    svg {
+      height: 12px;
+      width: 12px;
+
+      @include breakpoint($bp-large-up) {
+        height: 30px;
+        width: 30px;
+      }
+
+      path {
+        fill: #4a4a4a;
+      }
+    }
+
+    // Hover and focus.
+    &:hover,
+    &:focus {
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+    }
+  }
+}
+
+// // Footer.
+// #block-sociallistfooter {
+//   margin-bottom: 10px;
+//   text-align: center;
+
+//   @include breakpoint($bp-large-up) {
+//     float: right;
+//     margin-bottom: 0;
+//   }
+
+//   // Links.
+//   a,
+//   a:visited {
+//     svg {
+//       path {
+//         fill: $white;
+//       }
+//     }
+
+//     // Hover and focus.
+//     &:hover,
+//     &:focus {
+//       svg {
+//         path {
+//           fill: $white;
+//         }
+//       }
+//     }
+//   }
+// }

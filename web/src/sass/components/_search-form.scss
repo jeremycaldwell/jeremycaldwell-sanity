@@ -1,0 +1,40 @@
+// =============================================================================
+// SEARCH FORM
+// =============================================================================
+
+.search-form {
+  border-bottom: 3px solid #eee;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  width: 100%;
+
+  .container-inline {
+    display: inline-block;
+  }
+
+  // Hide Advanced Search options.
+  .search-advanced {
+    display: none;
+  }
+
+  .form-item {
+    display: inline-block;
+    margin: 0;
+  }
+
+  // Input field.
+  .form-text {
+    height: 40px;
+  }
+
+  // Submit button.
+  .form-submit {
+    @include font-size(16, 40);
+    padding: 0 20px;
+  }
+
+  // Search help.
+  .search-help-link {
+    display: none;
+  }
+}

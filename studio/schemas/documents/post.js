@@ -3,7 +3,7 @@ import {format} from 'date-fns'
 export default {
   name: 'post',
   type: 'document',
-  title: 'Blog Post',
+  title: 'Blog Posts',
   fields: [
     {
       name: 'title',
@@ -107,7 +107,7 @@ export default {
     },
     prepare ({title = 'No title', publishedAt, slug = {}, media}) {
       const dateSegment = format(publishedAt, 'YYYY/MM')
-      const path = `/${dateSegment}/${slug.current}/`
+      const path = `/blog/${slug.current}/`
       return {
         title,
         media,

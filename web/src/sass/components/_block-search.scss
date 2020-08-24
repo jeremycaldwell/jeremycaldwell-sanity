@@ -1,0 +1,74 @@
+// =============================================================================
+// SEARCH
+// =============================================================================
+
+.block-search {
+  background-color: transparent;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  transition: all .3s ease;
+  visibility: hidden;
+  width: 100%;
+  z-index: 901;
+
+  @include breakpoint($bp-large-up) {
+    display: block;
+    float: left;
+    height: 45px;
+    margin-right: 10px;
+    opacity: 1;
+    padding-right: 20px;
+    padding-top: 8px;
+    position: relative;
+    visibility: visible;
+    width: auto;
+    z-index: 0;
+  }
+
+  // Search overlay visible.
+  .is-search-overlay & {
+    background-color: $white;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .form-search {
+    background-color: #fff;
+    color: #666;
+    height: 30px;
+    margin-right: 5px;
+    padding: 0 5px;
+    transition: all .3s ease;
+    width: 230px;
+
+    @include breakpoint($bp-large-up) {
+      width: 150px;
+    }
+
+    // Focus.
+    &:focus {
+      @include breakpoint($bp-large-up) {
+        background-color: $white;
+        width: 200px;
+      }
+    }
+  }
+
+  .form-actions {
+    float: right;
+  }
+
+  .form-submit {
+    font-size: rem(16px);
+    line-height: 30px;
+    font-family: $font-header;
+    margin-right: 0;
+    padding: 0 10px;
+    width: 65px;
+  }
+}

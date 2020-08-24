@@ -1,0 +1,13 @@
+// =============================================================================
+// ELEMENT INVISIBLE
+// Makes an element visually hidden, but accessible.
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+// =============================================================================
+
+@mixin element-invisible {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+}

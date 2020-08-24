@@ -1,0 +1,21 @@
+// =============================================================================
+// BREAKPOINTS
+// =============================================================================
+
+@include breakpoint-set("to ems", true);
+
+// Hi DPI.
+$bp-hidpi:          min-resolution 1.5dppx;
+
+// Medium.
+$bp-medium:         639px;
+$bp-medium-up:      ($bp-medium + 1);
+
+// Large.
+$bp-large:          1023px;
+$bp-large-up:       ($bp-large + 1);
+$bp-up-to-large:    max-width ($bp-large - 1);
+
+// Fences.
+$bp-fence-small:    max-width ($bp-medium - 1);
+$bp-fence-medium:   $bp-medium ($bp-large - 1);

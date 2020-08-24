@@ -1,0 +1,40 @@
+// =============================================================================
+// IMAGE OVERLAY
+// Usage:
+// Wrap an image in a <div> and then apply this mixin to it.
+// =============================================================================
+
+@mixin image-overlay {
+  overflow: hidden;
+  position: relative;
+
+  // Overlay.
+  &:after {
+    background-color: rgba($black, .35);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: all .5s ease;
+    width: 100%;
+  }
+
+  img {
+    display: block;
+    transition: all .5s ease;
+    width: 100%;
+  }
+
+  // Hover and focus.
+  &:hover,
+  &:focus {
+
+    // Overlay.
+    &:after {
+      opacity: 1;
+    }
+  }
+}

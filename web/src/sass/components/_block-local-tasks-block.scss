@@ -1,0 +1,95 @@
+// =============================================================================
+// LOCAL TASKS (View, Edit, Delete, Revisions, etc.)
+// =============================================================================
+
+.block-local-tasks-block {
+  @include full-width;
+  background-color: #514a52;
+  background-color: #ccc;
+  margin-bottom: 40px;
+  padding: 5px;
+
+  @include breakpoint($bp-medium-up) {
+    padding: 15px 0 0;
+  }
+
+  // Tabs.
+  ul.tabs {
+    @include clearfix;
+    margin: 0;
+
+    @include breakpoint($bp-medium-up) {
+      @include container;
+    }
+
+    li {
+      border-bottom: 1px solid #ccc;
+      display: block;
+      margin: 0;
+
+      @include breakpoint($bp-medium-up) {
+        border-bottom: 0;
+        float: left;
+        margin-right: 2px;
+      }
+    }
+
+    // Links.
+    a,
+    a:visited {
+      background-color: #787179;
+      border-radius: 3px 3px 0 0;
+      color: #eeeaef;
+      display: block;
+      font-weight: 700;
+      padding: 15px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background-color .3s ease;
+
+      // Hover and focus.
+      &:hover,
+      &:focus {
+        background-color: #000;
+        color: #fff;
+      }
+
+      // Active.
+      &.is-active {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+
+    // Secondary.
+    &.secondary {
+      background-color: #fff;
+      border-top: 1px solid #fff;
+
+      li {
+        @include breakpoint($bp-medium-up) {
+          margin-right: 0;
+        }
+
+        + li {
+          margin-left: 20px;
+        }
+      }
+
+      // Links.
+      a,
+      a:visited {
+        background-color: transparent;
+        border-radius: 0;
+        color: #444;
+        padding: 20px 10px;
+
+        // Hover and focus.
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

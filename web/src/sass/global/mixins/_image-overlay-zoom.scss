@@ -1,0 +1,18 @@
+// =============================================================================
+// IMAGE OVERLAY ZOOM
+// Usage:
+// Wrap an image in a <div> and then apply this mixin to it.
+// =============================================================================
+
+@mixin image-overlay-zoom {
+  @include image-overlay;
+
+  // Hover and focus.
+  &:hover,
+  &:focus {
+
+    img {
+      transform: scale(1.1);
+    }
+  }
+}

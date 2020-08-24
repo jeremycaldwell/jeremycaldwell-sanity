@@ -1,0 +1,149 @@
+// =============================================================================
+// ARTICLE - TEASER
+// =============================================================================
+
+// Variables specific to this component.
+$bp-hero-full: 1600px;
+$bp-hero-large-full: ($bp-large + 1) $bp-hero-full;
+
+.blog-teaser {
+
+  // Node.
+  .node {
+    @include breakpoint($bp-medium) {
+      @include container;
+      align-items: center;
+      display: flex;
+    }
+  }
+}
+
+// Row.
+.blog-teaser__row {
+  position: relative;
+
+  + .blog-teaser__row {
+    margin-top: 40px;
+
+    @include breakpoint($bp-large-up) {
+      margin-top: 100px;
+    }
+  }
+}
+
+// Teaser image.
+.blog-teaser__image {
+  height: 350px;
+  margin-bottom: 20px;
+  max-height: 440px;
+  overflow: hidden;
+  position: relative;
+
+  @include breakpoint($bp-fence-small) {
+    height: 200px;
+  }
+
+  @include breakpoint($bp-large-up) {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: span(9);
+  }
+}
+
+// Featured image container.
+.blog-teaser__image-container {
+  height: 350px;
+  max-height: 440px;
+  position: relative;
+  z-index: 1;
+
+  @include breakpoint($bp-fence-small) {
+    height: 175px;
+  }
+
+  @include breakpoint($bp-hero-large-full) {
+    height: 440px;
+  }
+
+  @include breakpoint($bp-hero-full) {
+    height: 440px;
+  }
+
+  // Image.
+  img {
+    @include center;
+    display: block;
+    height: auto;
+    max-width: none;
+    width: auto;
+
+    @include breakpoint($bp-hero-large-full) {
+      height: 100%;
+    }
+  }
+}
+
+// Container.
+.blog-teaser__container {
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+
+  @include breakpoint($bp-medium) {
+    background-color: #f6f6f6;
+    margin: 50px 0;
+    margin-left:  -$gutter;
+    width: span(10);
+  }
+
+  @include breakpoint($bp-large) {
+    width: span(4);
+  }
+}
+
+.blog-teaser__inner {
+  @include breakpoint($bp-medium) {
+    padding: 40px;
+  }
+
+  @include breakpoint($bp-large) {
+    display: flex;
+    height: 340px;
+  }
+}
+
+// Content.
+.blog-teaser__content {
+  align-self: center;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+// Title.
+.blog-teaser__title {
+  font-size: rem(24px);
+  margin-bottom: 5px;
+
+  // Links.
+  a,
+  a:visited {
+    color: $text--dark;
+    text-decoration: none;
+
+    // Hover and focus.
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Meta.
+.blog-teaser__meta {
+  font-size: rem(12px);
+  margin-bottom: 20px;
+}

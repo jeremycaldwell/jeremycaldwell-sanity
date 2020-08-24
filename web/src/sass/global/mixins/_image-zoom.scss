@@ -1,0 +1,25 @@
+// =============================================================================
+// IMAGE ZOOM
+// Usage:
+// Wrap an image in a <div> and then apply this mixin to it.
+// =============================================================================
+
+@mixin image-zoom {
+  overflow: hidden;
+  position: relative;
+
+  img {
+    display: block;
+    transition: all .25s linear;
+    width: 100%;
+  }
+
+  // Hover and focus.
+  &:hover,
+  &:focus {
+
+    img {
+      transform: scale(1.1);
+    }
+  }
+}

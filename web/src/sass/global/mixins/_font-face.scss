@@ -1,0 +1,20 @@
+// mixin for bullet proof font declaration syntax
+@mixin declare-font-face($font-family, $font-filename, $font-id: null, $font-dir: fonts, $font-weight: normal, $font-style: normal) {
+
+  // If there is a $font-id then add the browser query string to force refresh
+  $refresh-string: null;
+
+  @if $font-id {
+    $refresh-string: "?" + $font-id;
+  }
+
+  @font-face {
+    font-family: "#{$font-family}";
+    src:
+    url("#{$font-dir}/#{$font-filename}.woff#{$refresh-string}") format("woff"),
+    url("#{$font-dir}/#{$font-filename}.ttf#{$refresh-string}") format("truetype"),
+    url("#{$font-dir}/#{$font-filename}.svg#{$refresh-string}##{$font-family}") format("svg");
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}

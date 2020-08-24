@@ -1,0 +1,16 @@
+// =============================================================================
+// BUTTONS
+// =============================================================================
+
+// Default button style.
+a.btn,
+a.btn:visited,
+.form-submit {
+  @include button;
+}
+
+// Secondary button.
+a.btn--secondary,
+a.btn--secondary:visited {
+  @include button--secondary;
+}

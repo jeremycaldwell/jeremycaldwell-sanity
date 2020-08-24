@@ -1,0 +1,11 @@
+// =============================================================================
+// FONT SIZE
+// Font size and line-height - Rem and PX fallback.
+// =============================================================================
+
+@mixin font-size($sizeValue: $base-font-size-integer, $line: $sizeValue * 1.5) {
+  font-size: ($sizeValue) + px;
+  font-size: ($sizeValue / $base-font-size-integer) + rem;
+  line-height: ($line) + px;
+  line-height: ($line / $base-font-size-integer) + rem;
+}

@@ -1,0 +1,13 @@
+// =============================================================================
+// HEADER
+// =============================================================================
+
+.region-header {
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  @include breakpoint($bp-large-up) {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+}
