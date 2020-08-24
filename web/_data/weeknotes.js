@@ -8,7 +8,9 @@ const hasToken = !!client.config().token
 function generateWeeknote (weeknote) {
   return {
     ...weeknote,
-    body: BlocksToMarkdown(weeknote.body, { serializers, ...client.config() })
+    body: BlocksToMarkdown(weeknote.body, { serializers, ...client.config() }),
+    work: BlocksToMarkdown(weeknote.work, { serializers, ...client.config() }),
+    personal: BlocksToMarkdown(weeknote.personal, { serializers, ...client.config() })
   }
 }
 
@@ -20,19 +22,9 @@ async function getWeeknotes () {
     publishedAt,
     title,
     slug,
-    body[]{
-      ...,
-      children[]{
-        ...,
-        // Join inline reference
-        _type == "authorReference" => {
-          // check /studio/documents/authors.js for more fields
-          "name": @.author->name,
-          "slug": @.author->slug
-        }
-      }
-    },
-    "authors": authors[].author->
+    body,
+    personal,
+    work
   }`
   const order = `| order(publishedAt asc)`
   const query = [filter, projection, order].join(' ')

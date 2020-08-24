@@ -11,3 +11,10 @@ navtitle: Home
 {% include "postslist.njk" %}
 
 <p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+
+<hr>
+
+<h1>Weeknotes</h1>
+
+{% set weeknoteslist = collections.myWeeknotes %}
+{% include "weeknoteslist.njk" %}

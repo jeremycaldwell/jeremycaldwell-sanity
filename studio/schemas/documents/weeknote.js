@@ -22,9 +22,10 @@ export default {
       }
     },
     {
-      name: 'body',
-      type: 'bodyPortableText',
-      title: 'Body'
+      name: 'publishedAt',
+      type: 'datetime',
+      title: 'Published at',
+      description: 'This can be used to schedule post for publishing'
     },
     {
       name: 'work',
@@ -32,10 +33,15 @@ export default {
       title: 'Work'
     },
     {
-      name: 'Personal',
+      name: 'personal',
       type: 'bodyPortableText',
       title: 'Personal'
-    }
+    },
+    {
+      name: 'body',
+      type: 'bodyPortableText',
+      title: 'Body'
+    },
   ],
   orderings: [
     {
@@ -63,13 +69,15 @@ export default {
     select: {
       title: 'title',
       publishedAt: 'publishedAt',
-      slug: 'slug',
-      media: 'mainImage'
+      slug: 'slug'
     },
-    prepare ({title = 'No title', slug = {}}) {
-      const path = `/${slug.current}/`
+    prepare ({title = 'No title', publishedAt, slug = {}, media}) {
+      const dateSegment = format(publishedAt, 'YYYY-MM-DD')
+      const path = `/weeknotes/${dateSegment}/`
       return {
-        title
+        title,
+        media,
+        subtitle: publishedAt ? path : 'Missing publishing date'
       }
     }
   }

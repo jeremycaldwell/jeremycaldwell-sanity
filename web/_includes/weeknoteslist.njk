@@ -1,0 +1,9 @@
+<ol reversed class="weeknotelist" style="counter-reset: start-from {{ weeknoteslist.length + 1 }}">
+{% for weeknote in weeknoteslist | reverse %}
+  {% set currentWeeknote = weeknote.data.weeknote %}
+  <li class="weeknotelist-item{% if weeknote.url == url %} weeknotelist-item-active{% endif %}">
+    <a href="{{ weeknote.url | url }}" class="weeknotelist-link">{% if currentWeeknote.title %}{{ currentWeeknote.title }}{% else %}<code>{{ weeknote.url }}</code>{% endif %}</a>
+    <time class="weeknotelist-date" datetime="{{ currentWeeknote.publishedAt }}">{{ currentWeeknote.publishedAt|readableDate }}</time>
+  </li>
+{% endfor %}
+</ol>
