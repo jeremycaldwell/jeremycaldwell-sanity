@@ -1,9 +1,9 @@
 import {format} from 'date-fns'
 
 export default {
-  name: 'post',
+  name: 'project',
   type: 'document',
-  title: 'Blog Posts',
+  title: 'Projects',
   fields: [
     {
       name: 'title',
@@ -28,45 +28,26 @@ export default {
       description: 'This can be used to schedule post for publishing'
     },
     {
-      name: 'mainImage',
-      type: 'mainImage',
-      title: 'Main image'
+      name: 'work',
+      type: 'bodyPortableText',
+      title: 'Work'
     },
     {
-      name: 'excerpt',
-      type: 'excerptPortableText',
-      title: 'Excerpt',
-      description:
-        'This ends up on summary pages, on Google, when people share your post in social media.'
-    },
-    {
-      name: 'categories',
-      type: 'array',
-      title: 'Categories',
-      of: [
-        {
-          type: 'reference',
-          to: {
-            type: 'category'
-          }
-        }
-      ]
+      name: 'personal',
+      type: 'bodyPortableText',
+      title: 'Personal'
     },
     {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'
-    }
+    },
   ],
   orderings: [
     {
-      name: 'publishingDateAsc',
-      title: 'Publishing date new–>old',
+      name: 'titleAsc',
+      title: 'Title A–>Z',
       by: [
-        {
-          field: 'publishedAt',
-          direction: 'asc'
-        },
         {
           field: 'title',
           direction: 'asc'
@@ -74,16 +55,12 @@ export default {
       ]
     },
     {
-      name: 'publishingDateDesc',
-      title: 'Publishing date old->new',
+      name: 'titleDesc',
+      title: 'Title Z->A',
       by: [
         {
-          field: 'publishedAt',
-          direction: 'desc'
-        },
-        {
           field: 'title',
-          direction: 'asc'
+          direction: 'desc'
         }
       ]
     }
@@ -92,11 +69,10 @@ export default {
     select: {
       title: 'title',
       publishedAt: 'publishedAt',
-      slug: 'slug',
-      media: 'mainImage'
+      slug: 'slug'
     },
     prepare ({title = 'No title', publishedAt, slug = {}, media}) {
-      const path = `/blog/${slug.current}/`
+      const path = `/project/${slug.current}/`
       return {
         title,
         media,

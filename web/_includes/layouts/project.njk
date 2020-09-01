@@ -1,0 +1,9 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-page
+---
+
+<article>
+  <h1>{{ project.title }}</h1>
+  {{ project.body | markdownify | safe }}
+</article>

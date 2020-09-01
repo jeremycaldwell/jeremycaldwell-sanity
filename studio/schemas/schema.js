@@ -10,6 +10,7 @@ import category from './documents/category'
 import post from './documents/post'
 import basicpage from './documents/basicpage'
 import weeknote from './documents/weeknote'
+import project from './documents/project'
 import siteSettings from './documents/siteSettings'
 
 // Object types
@@ -36,6 +37,7 @@ export default createSchema({
     author,
     basicpage,
     weeknote,
+    project,
     mainImage,
     authorReference,
     bodyPortableText,

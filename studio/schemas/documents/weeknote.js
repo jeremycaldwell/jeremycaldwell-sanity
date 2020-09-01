@@ -9,7 +9,19 @@ export default {
       name: 'title',
       type: 'string',
       title: 'Title',
-      description: 'Titles should be catchy, descriptive, and not too long'
+      description: 'Titles should be catchy, descriptive, and not too long',
+    },
+    {
+      name: 'publishedAt',
+      type: 'date',
+      title: 'Published at',
+      description: 'This can be used to schedule post for publishing',
+      options: {
+        dateFormat: 'YYYY-MM-DD',
+        timeFormat: 'HH:mm',
+        timeStep: 15,
+        calendarTodayLabel: 'Today'
+      }
     },
     {
       name: 'slug',
@@ -17,15 +29,9 @@ export default {
       title: 'Slug',
       description: 'Some frontends will require a slug to be set to be able to show the post',
       options: {
-        source: 'title',
+        source: 'publishedAt',
         maxLength: 96
       }
-    },
-    {
-      name: 'publishedAt',
-      type: 'datetime',
-      title: 'Published at',
-      description: 'This can be used to schedule post for publishing'
     },
     {
       name: 'work',
@@ -72,8 +78,7 @@ export default {
       slug: 'slug'
     },
     prepare ({title = 'No title', publishedAt, slug = {}, media}) {
-      const dateSegment = format(publishedAt, 'YYYY-MM-DD')
-      const path = `/weeknotes/${dateSegment}/`
+      const path = `/weeknote/${slug.current}/`
       return {
         title,
         media,

@@ -1,8 +1,5 @@
 ---
 layout: layouts/home.njk
-tags:
-  - nav
-navtitle: Home
 ---
 
 <h1>Latest Posts</h1>
@@ -18,3 +15,10 @@ navtitle: Home
 
 {% set weeknoteslist = collections.myWeeknotes %}
 {% include "weeknoteslist.njk" %}
+
+<hr>
+
+<h1>Projects</h1>
+
+{% set projectslist = collections.myProjects %}
+{% include "projectslist.njk" %}
