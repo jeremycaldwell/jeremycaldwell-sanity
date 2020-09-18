@@ -8,14 +8,19 @@
 $bp-hidpi:          min-resolution 1.5dppx;
 
 // Medium.
-$bp-medium:         639px;
+$bp-medium:         700px;
 $bp-medium-up:      ($bp-medium + 1);
 
 // Large.
-$bp-large:          1023px;
+$bp-large:          1020px;
 $bp-large-up:       ($bp-large + 1);
 $bp-up-to-large:    max-width ($bp-large - 1);
+
+// Wide.
+$bp-wide:           $container--width;
+$bp-wide-up:        ($bp-wide + 1);
 
 // Fences.
 $bp-fence-small:    max-width ($bp-medium - 1);
 $bp-fence-medium:   $bp-medium ($bp-large - 1);
+$bp-fence-large:    ($bp-large + 1) $bp-wide;

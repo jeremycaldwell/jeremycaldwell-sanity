@@ -1,0 +1,119 @@
+// =============================================================================
+// HERO
+// =============================================================================
+@import "../component.scss";
+
+$bp-hero-full:        1600px;
+$bp-hero-large-full:  ($bp-large + 1) $bp-hero-full;
+
+.hero {
+  background-color: lighten(red, 65);
+  height: 350px;
+  margin-top: -40px;
+  max-height: 500px;
+  overflow: hidden;
+  position: relative;
+
+  @include breakpoint($bp-large-up) {
+    height: auto;
+  }
+}
+
+// Image.
+.hero__image {
+  height: 350px;
+  max-height: 500px;
+  position: relative;
+
+  @include breakpoint($bp-hero-large-full) {
+    height: auto;
+  }
+
+  @include breakpoint($bp-hero-full) {
+    height: 500px;
+  }
+
+  // Image.
+  img {
+    @include center;
+    display: block;
+    height: auto;
+    max-width: none;
+    width: auto;
+
+    @include breakpoint($bp-hero-large-full) {
+      height: auto;
+      max-width: 100%;
+      position: static;
+      transform: none;
+      width: 100%;
+    }
+
+    @include breakpoint($bp-hero-full) {
+      width: 100%;
+    }
+  }
+}
+
+// Content.
+.hero__content {
+  @include vertical-center;
+  width: 100%;
+  z-index: 2;
+}
+
+// Inner.
+.hero__inner {
+  @include container;
+}
+
+// Body.
+.hero__body {
+  color: $white;
+  text-align: center;
+  text-shadow: 0 2px 5px rgba($black, .25);
+
+  @include breakpoint($bp-medium-up) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: span(10);
+  }
+
+  @include breakpoint($bp-large-up) {
+    max-width: span(8);
+  }
+}
+
+// Title.
+.hero__title {
+  @include font-size(30, 30);
+  color: $white;
+  font-weight: 300;
+  letter-spacing: tracking(-30);
+
+  @include breakpoint($bp-large-up) {
+    @include font-size(38, 38);
+  }
+
+  sup {
+    @include font-size(18, 18);
+    top: 0;
+    vertical-align: super;
+  }
+
+  @include breakpoint($bp-large-up) {
+    @include font-size(48, 48);
+  }
+
+  @include breakpoint($bp-wide-up) {
+    @include font-size(60, 60);
+  }
+}
+
+.hero__tagline {
+  letter-spacing: tracking(-20);
+
+  @include breakpoint($bp-large-up) {
+    @include font-size(24, 30);
+  }
+}

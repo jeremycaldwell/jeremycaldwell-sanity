@@ -1,0 +1,38 @@
+// =============================================================================
+// INTRO
+// =============================================================================
+
+.c--intro {
+  background: #eef0f3;
+  padding-bottom: 250px;
+  padding-top: 250px;
+  position: relative;
+}
+
+.c--intro__name {
+  background: #fffbcc;
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.c--intro__nav-menu {
+  font-family: $sans-pro;
+  font-size: rem(24px);
+  font-weight: 600;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c--intro__nav-item {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  // Siblings.
+  + .c--intro__nav-item {
+    margin-left: 40px;
+  }
+}

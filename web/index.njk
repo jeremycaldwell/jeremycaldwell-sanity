@@ -2,7 +2,23 @@
 layout: layouts/home.njk
 ---
 
-<h1>Latest Posts</h1>
+<section class="c--intro">
+  <div class="container">
+    <div class="c--intro__content">
+      <h1 class="c--intro__title">Hi, I'm <span class="c--intro__name">Jeremy Caldwell</span></h1>
+      <h2 class="c--intro__subtitle">Consultant and front-end developer from Spokane, WA.</h2>
+      <p>I'm the principal of <a href="https://www.eternalistic.com">Eternalistic Inc.</a>, a web development agency that develops quality Drupal and JAMStack websites for companies of all sizes. I'm also the founder and CEO of <a href="https://www.officecheck.in">OfficeCheck.in</a>.</p>
+      <ul class="c--intro__nav-menu">
+        <li class="c--intro__nav-item"><a href="https://twitter.com/jeremymcaldwell" class="remove-underline">Twitter</a></li>
+        <li class="c--intro__nav-item"><a href="https://github.com/jeremycaldwell" class="remove-underline">Github</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+<h2>Recent Posts</h2>
 
 {% set postslist = collections.myPosts %}
 {% include "postslist.njk" %}
@@ -11,14 +27,15 @@ layout: layouts/home.njk
 
 <hr>
 
-<h1>Weeknotes</h1>
+<h2>Weeknotes</h2>
 
 {% set weeknoteslist = collections.myWeeknotes %}
 {% include "weeknoteslist.njk" %}
 
 <hr>
 
-<h1>Projects</h1>
+<h2>Projects</h2>
 
 {% set projectslist = collections.myProjects %}
 {% include "projectslist.njk" %}
+</div>

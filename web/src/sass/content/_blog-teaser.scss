@@ -76,7 +76,7 @@ $bp-hero-large-full: ($bp-large + 1) $bp-hero-full;
     @include center;
     display: block;
     height: auto;
-    max-width: none;
+    max-width: 960px;
     width: auto;
 
     @include breakpoint($bp-hero-large-full) {

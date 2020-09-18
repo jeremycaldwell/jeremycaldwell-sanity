@@ -21,13 +21,12 @@ $times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
 $verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
 
 // Custom fonts.
-$baskervville: "Baskervville", serif;
-$raleway: "Raleway", sans-serif;
-$abel: "Abel", sans-serif;
+$lora:      "Lora", serif;
+$sans-pro:  "Source Sans Pro", sans-serif;
 
 // Font stack variables.
 //========================================//
-$base-font-family: $raleway;
-$font-body:        $raleway;
-$font-header:      $baskervville;
+$base-font-family: $lora;
+$font-body:        $lora;
+$font-header:      $lora;
 $font-monospace:   $courier;

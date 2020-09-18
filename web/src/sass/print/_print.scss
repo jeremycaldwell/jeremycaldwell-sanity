@@ -50,7 +50,6 @@
   }
 
   .header {
-    box-shadow: none;
     height: auto !important;
     margin-top: 0 !important;
     position: static;
@@ -73,33 +72,9 @@
   }
 
   // Hide elements.
-  .user-menu,
-  .banner,
-  .facet-sidebar,
   .footer,
-  .local-tasks,
-  .action-links,
-  .ironandsage-admin-menu,
-  .navigation,
-  .region-header-top,
-  .paragraphs-items-field-hero,
-  .node-event__quicklinks,
-  .node-event__registration,
-  #block-views-ironandsage-events-block,
-  #block-block-98 {
+  .navigation {
     display: none !important;
     visibility: hidden !important;
-  }
-
-  // Events: Full width.
-  .node-event .full-width {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    padding-top: 0 !important;
-  }
-
-  // Events: Location.
-  .node-event .location-locations-display {
-    margin-bottom: 0 !important;
   }
 }

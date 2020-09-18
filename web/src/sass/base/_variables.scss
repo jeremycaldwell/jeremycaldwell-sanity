@@ -19,21 +19,13 @@ $green:         #09aa40;
 $orange:        #ff8000;
 
 // Other.
-$text--dark:    #444;
+$text--dark:    #090909;
 
 // Page.
 //========================================//
 
-// Susy columns.
-$susy: (
-  "columns": susy-repeat(12),
-  "gutters": 30px,
-  "spread": "narrow",
-  "container-spread": "narrow",
-);
-
 // Layout.
-$container--width: 1320px;
+$container--width: 1000px;
 $gutter: 15px;
 
 // Header.

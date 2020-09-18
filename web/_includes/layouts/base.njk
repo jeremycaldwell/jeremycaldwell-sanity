@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ renderData.title or title or metadata.title }}</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
-    <link type="text/css" rel="stylesheet" href="{{ '/' | url }}css/styles.css" media="all" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6b8367">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ '/' | url }}dist/css/style.css" media="all" />
   </head>
   <body>
-    <header>
-      <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-      <ul class="nav">
-        {%- for nav in collections.nav | reverse -%}
-        <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}"><a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a></li>
-        {%- endfor -%}
-        <li class="nav-item"><a href="/about">About</a></li>
-        <li class="nav-item"><a href="/contact">Contact</a></li>
-      </ul>
-    </header>
-
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      {{ content | safe }}
-    </main>
-
-    <footer>
-    </footer>
-
-    <!-- Current page: {{ page.url | url }} -->
+    <a href="#main-content" class="visually-hidden focusable skip-link">Skip to main content</a>
+    <div class="page-container">
+      <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+        <a id="main-content" tabindex="-1" class="remove-underline"></a>
+        {{ content | safe }}
+      </main>
+      <footer class="footer" role="contentinfo">
+        <div class="container">
+          Copyright © 1996-2020 Jeremy Caldwell
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

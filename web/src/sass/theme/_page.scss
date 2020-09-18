@@ -3,12 +3,56 @@
 // =============================================================================
 
 html {
+  background: $white;
   color: $text--dark;
   font-family: $base-font-family;
+  margin: $gutter;
+
+  // White border.
+  &:before,
+  &:after {
+    content: "";
+    background: $white;
+    height: 15px;
+    position: fixed;
+    left: 0;
+    width: 100%;
+  }
+
+  // Top border.
+  &:before {
+    top: 0;
+  }
+
+  // Bottom border.
+  &:after {
+    bottom: 0;
+  }
 }
 
 body {
-  background-color: $white;
+  background: $white;
+
+  // White border.
+  &:before,
+  &:after {
+    content: "";
+    background: $white;
+    height: 15px;
+    position: fixed;
+    left: 0;
+    width: 100%;
+  }
+
+  // Top border.
+  &:before {
+    top: 0;
+  }
+
+  // Bottom border.
+  &:after {
+    bottom: 0;
+  }
 
   // Navigation expanded.
   &.is-navigation-expanded {
@@ -17,31 +61,49 @@ body {
   }
 }
 
-.dialog-off-canvas-main-canvas {
-  overflow-x: hidden;
-}
-
-// Sections.
-// .page-container {
-// }
-
 // Links.
 a,
 a:visited {
-  color: $brand--sage;
-  text-decoration: underline;
+  color: $text--dark;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
   transition: color .3s ease;
+
+  // Underline.
+  &:after {
+    background: #ff5d52;
+    bottom: 3px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
 
   // Hover and focus.
   &:hover,
   &:focus {
-    color: $brand--sage;
-    text-decoration: underline;
+    color: #ff5d52;
+    text-decoration: none;
+  }
+
+  // Remove bottom border.
+  &.remove-underline {
+    &:after {
+      display: none;
+    }
+  }
+
+  // Main content anchor.
+  &#main-content {
+    display: inline;
   }
 }
 
 // Selection.
 ::selection {
-  background-color: lighten($brand--sage, 20%);
+  background-color: lighten(#ff5d52, 20%);
   color: $text--dark;
 }

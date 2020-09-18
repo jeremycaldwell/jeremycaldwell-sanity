@@ -14,47 +14,29 @@ h6 {
 }
 
 h1 {
-  font-size: rem(28px);
+  font-size: rem(58px);
+  font-weight: 700;
   line-height: 1.25;
-  margin-bottom: 40px;
-
-  // @include breakpoint($bp-medium-up) {
-  //   font-size: rem(38px);
-  //   line-height: 1.25;
-  // }
+  margin-bottom: 20px;
 }
 
 h2 {
   font-size: rem(28px);
+  font-weight: 400;
   line-height: 1.25;
   margin-bottom: 20px;
-
-  @include breakpoint($bp-medium-up) {
-    font-size: rem(28px);
-    line-height: 1.25;
-  }
 }
 
 h3 {
   font-size: rem(20px);
   line-height: 1.2;
   margin-bottom: 20px;
-
-  @include breakpoint($bp-medium-up) {
-    font-size: rem(24px);
-    line-height: 1.25;
-  }
 }
 
 h4 {
   font-size: rem(20px);
   line-height: 1.2;
   margin-bottom: 20px;
-
-  @include breakpoint($bp-medium-up) {
-    font-size: rem(24px);
-    line-height: 1.25;
-  }
 }
 
 h5 {
@@ -70,8 +52,8 @@ h6 {
 }
 
 p {
-  font-size: rem(15px);
-  line-height: 2;
+  font-size: rem(21px);
+  line-height: 1.5;
   margin-bottom: 32px;
   margin-top: 0;
 }
@@ -111,8 +93,8 @@ blockquote {
 }
 
 // Node body unordered and ordered list.
-.node__body ul,
-.node__body ol {
+ul,
+ol {
   font-size: rem(16px);
   line-height: 1.25;
   margin: 0 0 20px;
@@ -130,4 +112,8 @@ pre {
   font-size: rem(15px);
   margin: 0;
   overflow: auto;
+}
+
+strong {
+  font-weight: 700;
 }

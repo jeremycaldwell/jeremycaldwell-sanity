@@ -19,6 +19,15 @@
   }
 }
 
+// Components stacked.
+.component {
+
+  // Siblings.
+  + .component {
+    margin-top: 40px;
+  }
+}
+
 // Hidden.
 .hidden {
   display: none;
@@ -27,11 +36,6 @@
 // Visually hidden;
 .visually-hidden {
   @include visually-hidden;
-}
-
-// Messages.
-.messages {
-  margin-bottom: rem(40px);
 }
 
 // Float left.
@@ -53,143 +57,4 @@
 // Text center.
 .text-center {
   text-align: center;
-}
-
-// Bullet list.
-.bullet {
-  li {
-    background-repeat: no-repeat;
-    background-position: 0 0;
-  }
-
-  // Blue.
-  &.bullet--blue {
-    li {
-      list-style-image: url("../images/styles/bullet-blue.svg");
-    }
-  }
-
-  // Green.
-  &.bullet--green {
-    li {
-      list-style-image: url("../images/styles/bullet-green.svg");
-    }
-  }
-
-  // Orange.
-  &.bullet--orange {
-    li {
-      list-style-image: url("../images/styles/bullet-orange.svg");
-    }
-  }
-}
-
-// Checkmark list.
-.checkmark {
-  li {
-    background-repeat: no-repeat;
-    background-position: 0 0;
-  }
-
-  // Blue.
-  &.checkmark--blue {
-    li {
-      list-style-image: url("../images/styles/checkmark-blue.svg");
-    }
-  }
-
-  // Blue - Outline.
-  &.checkmark--blue--outline {
-    li {
-      list-style-image: url("../images/styles/checkmark-blue-outline.svg");
-    }
-  }
-
-  // Green.
-  &.checkmark--green {
-    li {
-      list-style-image: url("../images/styles/checkmark-green.svg");
-    }
-  }
-
-  // Green - Outline.
-  &.checkmark--green--outline {
-    li {
-      list-style-image: url("../images/styles/checkmark-green-outline.svg");
-    }
-  }
-
-  // Orange.
-  &.checkmark--orange {
-    li {
-      list-style-image: url("../images/styles/checkmark-orange.svg");
-    }
-  }
-
-  // Orange - Outline.
-  &.checkmark--orange--outline {
-    li {
-      list-style-image: url("../images/styles/checkmark-orange-outline.svg");
-    }
-  }
-
-  // Teal.
-  &.checkmark--teal {
-    li {
-      list-style-image: url("../images/styles/checkmark-teal.svg");
-    }
-  }
-
-  // Teal - Outline.
-  &.checkmark--teal--outline {
-    li {
-      list-style-image: url("../images/styles/checkmark-teal-outline.svg");
-    }
-  }
-}
-
-// Download.
-a.download,
-a.download:visited {
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  display: inline-block;
-  line-height: 1;
-  padding-left: 25px;
-
-  // Blue.
-  &.download--blue {
-    background-image: url("../images/styles/download-blue.svg");
-  }
-
-  // Green.
-  &.download--green {
-    background-image: url("../images/styles/download-green.svg");
-  }
-
-  // Orange.
-  &.download--orange {
-    background-image: url("../images/styles/download-orange.svg");
-  }
-}
-
-// Arrow.
-a.arrow,
-a.arrow:visited {
-  background-image: url("../images/styles/arrow.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  display: inline-block;
-  line-height: 1;
-  padding-left: 25px;
-
-  // Solid.
-  &.arrow--solid {
-    background-image: url("../images/styles/arrow-solid.svg");
-  }
-
-  // Outline.
-  &.arrow--outline {
-    background-image: url("../images/styles/arrow-outline.svg");
-  }
 }

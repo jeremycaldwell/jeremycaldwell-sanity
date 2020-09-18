@@ -1,6 +1,7 @@
 const { DateTime } = require("luxon");
 const util = require('util')
 const CleanCSS = require("clean-css");
+const urlFor = require('./utils/imageUrl');
 
 module.exports = function(eleventyConfig) {
 
@@ -21,6 +22,39 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
   });
+
+  // Copy without modification.
+  eleventyConfig.addPassthroughCopy('dist/css');
+  eleventyConfig.addPassthroughCopy('images');
+
+  // Copy Favicons without modification.
+  eleventyConfig.addPassthroughCopy('favicon.ico');
+  eleventyConfig.addPassthroughCopy('android-chrome-192x192.png');
+  eleventyConfig.addPassthroughCopy('android-chrome-512x512.png');
+  eleventyConfig.addPassthroughCopy('apple-touch-icon.png');
+  eleventyConfig.addPassthroughCopy('favicon-16x16.png');
+  eleventyConfig.addPassthroughCopy('favicon-32x32.png');
+  eleventyConfig.addPassthroughCopy('mstile-150x150.png');
+  eleventyConfig.addPassthroughCopy('safari-pinned-tab.svg');
+  eleventyConfig.addPassthroughCopy('browserconfig.xml');
+  eleventyConfig.addPassthroughCopy('site.webmanifest');
+
+  // Image URL.
+  eleventyConfig.addShortcode('imageUrlFor', (image, width="400",quality) => {
+    return urlFor(image)
+      .width(width)
+      .quality(quality)
+      .auto('format')
+  })
+
+  // Image URL cropped.
+  eleventyConfig.addShortcode('croppedUrlFor', (image,width,height,quality) => {
+    return urlFor(image)
+      .width(width)
+      .height(height)
+      .quality(quality)
+      .auto('format')
+  })
 
   let markdownIt = require("markdown-it");
   let markdownItAnchor = require("markdown-it-anchor");

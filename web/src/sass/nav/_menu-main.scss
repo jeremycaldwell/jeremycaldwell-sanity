@@ -1,11 +1,11 @@
 // =============================================================================
-// SEARCH RESULTS
+// MENU - MAIN
 // =============================================================================
 
-.page-search404 {
+.menu--main {
+}
 
-  // Page title.
-  .page-title {
-    max-width: $container--width;
-  }
+// Nav toggle.
+.nav-toggle {
+  display: none !important;
 }
