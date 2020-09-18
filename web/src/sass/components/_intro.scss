@@ -10,13 +10,29 @@
   position: relative;
 }
 
+// Name.
 .c--intro__name {
-  background: #fffbcc;
   display: inline-block;
   padding-left: 10px;
   padding-right: 10px;
+  position: relative;
+  z-index: 1;
+
+  // Highlight.
+  &:after {
+    animation: highlight .5s ease forwards;
+    animation-delay: 1s;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    transform: rotate(-1.5deg);
+    width: 100%;
+    z-index: -1;
+  }
 }
 
+// Navigation.
 .c--intro__nav-menu {
   font-family: $sans-pro;
   font-size: rem(24px);
@@ -35,5 +51,16 @@
   // Siblings.
   + .c--intro__nav-item {
     margin-left: 40px;
+  }
+}
+
+// Highlight animation.
+@keyframes highlight {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+    background: #fffbcc;
   }
 }

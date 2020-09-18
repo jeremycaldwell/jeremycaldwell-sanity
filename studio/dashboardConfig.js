@@ -20,7 +20,7 @@ export default {
                 {
                   buildHookId: '5f43227b542704e9bb6cd251',
                   title: 'Blog Website',
-                  name: 'jeremycaldwell-sanity',
+                  name: 'jeremycaldwell',
                   apiId: '504d394f-f1a7-41f8-8bfc-11e28c2b5f05'
                 }
               ]
@@ -33,7 +33,7 @@ export default {
             value: 'https://github.com/jeremycaldwell/jeremycaldwell-sanity',
             category: 'Code'
           },
-          {title: 'Frontend', value: 'https://jeremycaldwell-sanity.netlify.app', category: 'apps'}
+          {title: 'Frontend', value: 'https://www.jeremycaldwell.me', category: 'apps'}
         ]
       }
     },
