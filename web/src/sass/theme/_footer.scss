@@ -3,33 +3,9 @@
 // =============================================================================
 
 .footer {
-  color: #a5a5a5;
-  padding-bottom: 20px;
-  padding-top: 20px;
-
-  @include breakpoint($bp-large-up) {
-    padding-top: 60px;
+  p {
+    color: #595c62;
+    font-size: rem(16px);
+    margin-bottom: 0;
   }
-
-  // Links.
-  a,
-  a:visited {
-    color: $white;
-  }
-}
-
-//  Inner.
-.footer-inner {
-  @include container;
-}
-
-// Footer top.
-.region-footer-top {
-  padding-bottom: 15px;
-}
-
-// Footer bottom.
-.region-footer-bottom {
-  border-top: 1px solid #818181;
-  padding-top: 18px;
 }
