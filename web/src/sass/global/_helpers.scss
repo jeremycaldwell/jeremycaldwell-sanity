@@ -58,3 +58,14 @@
 .text-center {
   text-align: center;
 }
+
+// Highlight animation.
+@keyframes highlight {
+  0% {
+    width: 0%;
+  }
+  100% {
+    background: #fffbcc;
+    width: 100%;
+  }
+}

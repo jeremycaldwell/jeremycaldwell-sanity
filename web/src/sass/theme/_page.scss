@@ -74,8 +74,8 @@ a:visited {
 
   // Underline.
   &:after {
-    background: #ff5d52;
-    bottom: 3px;
+    background: $orange;
+    bottom: 0;
     content: "";
     display: block;
     height: 2px;
@@ -87,7 +87,7 @@ a:visited {
   // Hover and focus.
   &:hover,
   &:focus {
-    color: #ff5d52;
+    color: $orange;
     text-decoration: none;
   }
 
@@ -106,6 +106,6 @@ a:visited {
 
 // Selection.
 ::selection {
-  background-color: lighten(#ff5d52, 20%);
+  background-color: lighten($orange, 20%);
   color: $text--dark;
 }

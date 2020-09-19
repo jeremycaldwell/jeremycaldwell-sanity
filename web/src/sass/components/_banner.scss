@@ -1,0 +1,42 @@
+// =============================================================================
+// BANNER
+// =============================================================================
+
+// Fade in right animation.
+@keyframes banner-fade-in-right {
+  0% {
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    right: $gutter;
+  }
+}
+
+.banner {
+  animation: banner-fade-in-right 1.5s ease forwards;
+  animation-delay: 3s;
+  background: $white;
+  // border-radius: 5px;
+  // border: 2px solid #ddd;
+  // box-shadow: 0 4px 20px rgba(0,0,0,.15);
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: $gutter * 2;
+  visibility: hidden;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  // Link.
+  a,
+  a:visited {
+    display: block;
+    padding: $gutter;
+  }
+}

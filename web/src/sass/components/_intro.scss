@@ -2,16 +2,26 @@
 // INTRO
 // =============================================================================
 
-.c--intro {
+.intro {
   background: #eef0f3;
   margin-bottom: 125px;
   padding-bottom: 250px;
   padding-top: 250px;
   position: relative;
+
+  // Links.
+  a,
+  a:visited {
+
+    // Underline.
+    &:after {
+      bottom: 3px;
+    }
+  }
 }
 
 // Name.
-.c--intro__name {
+.intro__name {
   display: inline-block;
   padding-left: 10px;
   padding-right: 10px;
@@ -33,7 +43,7 @@
 }
 
 // Navigation.
-.c--intro__nav-menu {
+.intro__nav-menu {
   font-family: $sans-pro;
   font-size: rem(24px);
   font-weight: 600;
@@ -42,25 +52,15 @@
   padding: 0;
 }
 
-.c--intro__nav-item {
+// Navigation item.
+.intro__nav-item {
   display: inline-block;
   list-style: none;
   margin: 0;
   padding: 0;
 
   // Siblings.
-  + .c--intro__nav-item {
+  + .intro__nav-item {
     margin-left: 40px;
-  }
-}
-
-// Highlight animation.
-@keyframes highlight {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-    background: #fffbcc;
   }
 }

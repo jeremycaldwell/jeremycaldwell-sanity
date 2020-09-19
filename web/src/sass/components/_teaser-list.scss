@@ -2,11 +2,11 @@
 // TEASER LIST
 // =============================================================================
 
-.c--teaser-list {
+.teaser-list {
   margin-bottom: 100px;
 }
 
-.c--teaser-list__title {
+.teaser-list__title {
   font-size: rem(26px);
   font-style: italic;
   margin-bottom: 40px;
@@ -23,4 +23,39 @@
     top: 50%;
     width: 3rem;
   }
+}
+
+// List.
+.teaser-list__list {
+  list-style: none;
+  margin: 0 0 40px;
+  padding: 0;
+}
+
+// Item.
+.teaser-list__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  // Sibling.
+  + .teaser-list__item {
+    margin-top: 40px;
+  }
+}
+
+// Meta.
+.teaser-list__meta {
+  color: #595C62;
+  display: block;
+  font-family: $sans-pro;
+  margin-bottom: 10px;
+}
+
+// Link.
+.teaser-list__link {
+  display: block;
+  font-size: rem(42px);
+  font-weight: 700;
+  line-height: 1;
 }
