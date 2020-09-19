@@ -1,10 +1,7 @@
-<ol reversed class="teaser-list__list" style="counter-reset: start-from {{ projectslist.length + 1 }}">
-{% for project in projectslist | reverse %}
+<ol class="teaser-list__list" style="counter-reset: start-from {{ projectslist.length + 1 }}">
+{% for project in projectslist %}
   {% set currentProject = project.data.project %}
   <li class="teaser-list__item{% if project.url == url %} teaser-list__item--active{% endif %}">
-    <span class="teaser-list__meta">
-      <time class="teaser-list__date" datetime="{{ currentProject.publishedAt }}">{{ currentProject.publishedAt|readableDate }}</time>
-    </span>
     <a href="{{ project.url | url }}" class="teaser-list__link remove-underline">{% if currentProject.title %}{{ currentProject.title }}{% else %}<code>{{ project.url }}</code>{% endif %}</a>
   </li>
 {% endfor %}

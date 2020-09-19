@@ -2,9 +2,6 @@
 {% for weeknote in weeknoteslist | reverse %}
   {% set currentWeeknote = weeknote.data.weeknote %}
   <li class="teaser-list__item{% if weeknote.url == url %} teaser-list__item--active{% endif %}">
-    <span class="teaser-list__meta">
-      <time class="teaser-list__date" datetime="{{ currentWeeknote.publishedAt }}">{{ currentWeeknote.publishedAt|readableDate }}</time>
-    </span>
     <a href="{{ weeknote.url | url }}" class="teaser-list__link remove-underline">{% if currentWeeknote.title %}{{ currentWeeknote.title }}{% else %}<code>{{ weeknote.url }}</code>{% endif %}</a>
   </li>
 {% endfor %}
