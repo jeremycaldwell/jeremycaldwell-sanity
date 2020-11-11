@@ -14,10 +14,14 @@ h6 {
 }
 
 h1 {
-  font-size: rem(58px);
+  font-size: rem(32px);
   font-weight: 700;
   line-height: 1.25;
-  margin-bottom: 20px;
+  margin-bottom: 0;
+
+  @include breakpoint($bp-large) {
+    font-size: rem(58px);
+  }
 }
 
 h2 {

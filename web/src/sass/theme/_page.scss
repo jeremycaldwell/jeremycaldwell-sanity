@@ -66,41 +66,27 @@ body {
 // Links.
 a,
 a:visited {
+  border-bottom: 2px solid $orange;
   color: $text--dark;
-  display: inline-block;
-  position: relative;
   text-decoration: none;
-  transition: color .3s ease;
+  transition: border-bottom-color .3s ease, color .3s ease;
 
-  // Underline.
-  &:after {
-    background: $orange;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 0;
-    position: absolute;
-    width: 100%;
+  // Remove bottom border.
+  &.remove-underline {
+    border-bottom: 0;
+
+    // Hover and focus.
+    &:hover,
+    &:focus {
+      color: $orange;
+    }
   }
 
   // Hover and focus.
   &:hover,
   &:focus {
-    color: $orange;
+    border-bottom-color: #ccc;
     text-decoration: none;
-  }
-
-  // Remove bottom border.
-  &.remove-underline {
-    &:after {
-      display: none;
-    }
-  }
-
-  // Main content anchor.
-  &#main-content {
-    display: inline;
   }
 }
 
