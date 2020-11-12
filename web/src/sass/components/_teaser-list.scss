@@ -15,13 +15,18 @@
   // Horizontal divider.
   &:before {
     background-color: #acadb0;
+    bottom: -10px;
     content: '';
     display: inline-block;
     height: 1px;
-    left: -80px;
+    left: 0;
     position: absolute;
-    top: 50%;
     width: 3rem;
+
+    @include breakpoint($bp-large-up) {
+      bottom: 50%;
+      left: -80px;
+    }
   }
 }
 
@@ -55,7 +60,11 @@
 // Link.
 .teaser-list__link {
   display: block;
-  font-size: rem(42px);
+  font-size: rem(28px);
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.25;
+
+  @include breakpoint($bp-large-up) {
+    font-size: rem(42px);
+  }
 }

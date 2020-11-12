@@ -28,6 +28,7 @@
   right: 0;
   top: $gutter * 2;
   visibility: hidden;
+  z-index: 1;
 
   p {
     margin-bottom: 0;
@@ -37,6 +38,10 @@
   a,
   a:visited {
     display: block;
-    padding: $gutter;
+    padding: 5px 10px;
+
+    @include breakpoint($bp-medium-up) {
+      padding: $gutter;
+    }
   }
 }

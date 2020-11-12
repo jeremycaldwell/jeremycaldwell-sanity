@@ -4,10 +4,22 @@
 
 .intro {
   background: #eef0f3;
-  margin-bottom: 125px;
-  padding-bottom: 250px;
-  padding-top: 250px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  padding-top: 40px;
   position: relative;
+
+  @include breakpoint($bp-medium-up) {
+    margin-bottom: 80px;
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+
+  @include breakpoint($bp-large-up) {
+    margin-bottom: 125px;
+    padding-bottom: 250px;
+    padding-top: 250px;
+  }
 
   // Links.
   a,
@@ -55,13 +67,19 @@
 
 // Navigation item.
 .intro__nav-item {
-  display: inline-block;
+  display: block;
   list-style: none;
   margin: 0;
   padding: 0;
 
+  @include breakpoint($bp-medium-up) {
+    display: inline-block;
+  }
+
   // Siblings.
   + .intro__nav-item {
-    margin-left: 40px;
+    @include breakpoint($bp-medium-up) {
+      margin-left: 40px;
+    }
   }
 }
