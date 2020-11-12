@@ -18,6 +18,14 @@ templateClass: article
   </div>
 </article>
 
+<section class="teaser-list">
+  <div class="container">
+    <h2 class="teaser-list__title">Recent Posts</h2>
+    {% set postslist = collections.myPosts %}
+    {% include "postslist.njk" %}
+  </div>
+</section>
+
 <script>
   if (document.getElementsByClassName('tweet').length > 0) {
     window.twttr = (function (d, s, id) {

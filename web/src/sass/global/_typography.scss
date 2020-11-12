@@ -112,10 +112,33 @@ ol {
 }
 
 pre {
-  border: 0;
-  font-size: rem(15px);
-  margin: 0;
+  background: rgb(245, 247, 255);
+  color: rgb(94, 102, 135);
+  direction: ltr;
+  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  font-size: rem(14px);
+  hyphens: none;
+  line-height: 1.375;
+  margin: 20px 0;
   overflow: auto;
+  padding: 20px;
+  tab-size: 4;
+  text-align: left;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal;
+}
+
+p code {
+  background: #f5f7ff;
+  border-radius: 6px;
+  color: #5e6687;
+  font-family: monospace;
+  font-size: 16px;
+  margin: 0;
+  overflow-wrap: normal;
+  padding: 12px 8px !important;
+  white-space: pre;
 }
 
 strong {

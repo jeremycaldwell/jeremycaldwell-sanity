@@ -28,11 +28,6 @@ export default {
       description: 'This can be used to schedule post for publishing'
     },
     {
-      name: 'mainImage',
-      type: 'mainImage',
-      title: 'Main image'
-    },
-    {
       name: 'excerpt',
       type: 'excerptPortableText',
       title: 'Excerpt',
