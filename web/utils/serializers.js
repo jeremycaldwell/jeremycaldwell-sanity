@@ -7,7 +7,5 @@ module.exports = {
     code: ({node}) =>
       '```' + node.language + '\n' + node.code + '\n```',
     mainImage: ({node}) => `![${node.alt}](${imageUrl(node).width(600).url()})`,
-    twitter: ({ node }) => `<div id="${node.id}" class="tweet"></div>`,
-    instagram: ({ node }) => `<div data-url="https://www.instagram.com/p/${node.id}" class="instagram"></div>`,
   }
 }
