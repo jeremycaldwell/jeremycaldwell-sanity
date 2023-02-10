@@ -13,6 +13,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "lerna": "^6.4.1"
+    "lerna": "^3.16.4"
   }
 }
