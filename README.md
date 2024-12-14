@@ -1,4 +1,4 @@
-# jeremycaldwell.me - Sanity
+# jeremycaldwell.dev - Sanity
 
 _Simple blog starter with [11ty](https://11ty.io)._
 
